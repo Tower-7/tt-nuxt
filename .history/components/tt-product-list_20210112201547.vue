@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <el-row :gutter="30" class="product-wrap">
+    <div class="top">
+      <div>\\\PRODUCT</div>
+      <div>MORE</div>
+    </div>
+    <el-row :gutter="20" class="product-wrap">
       <el-col
         :xs="24"
         :sm="12"
@@ -48,7 +52,16 @@ export default class ProductList extends Vue {
 <style lang="scss" scoped>
 .container {
   background-color: #e6e6e6;
-
+  .top {
+    display: flex;
+    width: 100%;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    justify-content: space-between;
+    background-color: #000;
+    margin-bottom: 20px;
+  }
   .product-wrap {
     padding: 0 20px;
     .product {

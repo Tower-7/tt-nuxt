@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <el-row :gutter="30" class="product-wrap">
+    <el-row :gutter="40" class="product-wrap">
       <el-col
         :xs="24"
         :sm="12"

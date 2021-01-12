@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <el-row :gutter="30" class="product-wrap">
+    <el-row :gutter="20" class="product-wrap">
       <el-col
         :xs="24"
         :sm="12"
@@ -50,7 +50,6 @@ export default class ProductList extends Vue {
   background-color: #e6e6e6;
 
   .product-wrap {
-    padding: 0 20px;
     .product {
       height: 400px;
       .pic {

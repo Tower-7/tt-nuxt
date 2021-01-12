@@ -9,15 +9,13 @@
       >
     </el-row>
     <el-row class="wrap">
-      <el-col :xs="24" :sm="24" :md="22" :lg="22" :xl="18"
+      <el-col :xs="24" :sm="24" :md="22" :lg="22" :xl="20"
         ><div class="grid-content bg-purple-light">
           <tt-nav></tt-nav>
           <tt-banner style="margin-top:30px"></tt-banner>
           <tt-culmn></tt-culmn>
           <tt-product-list style="padding-top:20px"></tt-product-list>
-          <tt-culmn></tt-culmn>
           <tt-company-info></tt-company-info>
-          <tt-footer></tt-footer>
           <div class="footer" style="padding-top:50px"></div></div
       ></el-col>
     </el-row>
@@ -31,15 +29,13 @@ import ttBanner from "../components/tt-banner.vue";
 import ttCulmn from "../components/tt-culmn.vue";
 import ttProductList from "../components/tt-product-list.vue";
 import ttCompanyInfo from "../components/tt-company-info.vue";
-import ttFooter from "../components/tt-footer.vue";
 @Component({
   components: {
     ttNav,
     ttBanner,
     ttCulmn,
     ttProductList,
-    ttCompanyInfo,
-    ttFooter
+    ttCompanyInfo
   }
 })
 export default class Index extends Vue {}

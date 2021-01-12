@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <el-row :gutter="30" class="product-wrap">
+    <div class="top">
+      <div>\\\PRODUCT</div>
+      <div>MORE</div>
+    </div>
+    <el-row :gutter="20" class="product-wrap">
       <el-col
         :xs="24"
         :sm="12"
