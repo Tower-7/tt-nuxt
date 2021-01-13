@@ -126,7 +126,7 @@ export default class TtBlog extends Vue {
 }
 @media (max-width: 1920px) {
   .blog {
-    height: 510px;
+    height: 490px;
     .pic {
       height: 350px;
     }
@@ -134,7 +134,7 @@ export default class TtBlog extends Vue {
 }
 @media (max-width: 1200px) {
   .blog {
-    height: 460px;
+    height: 440px;
     .pic {
       height: 300px;
     }
@@ -142,7 +142,7 @@ export default class TtBlog extends Vue {
 }
 @media (max-width: 992px) {
   .blog {
-    height: 610px;
+    height: 590px;
     .pic {
       height: 450px;
     }

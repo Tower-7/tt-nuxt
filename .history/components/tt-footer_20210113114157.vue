@@ -18,10 +18,6 @@
       </el-row>
     </div>
     <div class="line2"></div>
-    <div class="instruction">
-      Photo copyright retained by photo owners, everything else © 2021 Design
-      Milk®.
-    </div>
   </div>
 </template>
 
@@ -50,15 +46,7 @@ export default class xxx extends Vue {}
   }
   .web-site {
     display: flex;
-    line-height: 30px;
-    font-weight: 700;
-  }
-  .instruction {
-    margin: 40px;
-    display: flex;
-    font-size: 14px;
-    color: #555;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 </style>

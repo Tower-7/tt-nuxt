@@ -1,6 +1,6 @@
 import request from "./request";
 /**
- * 获取商品列表
+ * 获取轮播图
  */
 function fetchList() {
   return request({

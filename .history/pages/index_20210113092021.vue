@@ -17,8 +17,6 @@
           <tt-product-list style="padding-top:20px"></tt-product-list>
           <tt-culmn :title="CompanyInfo"></tt-culmn>
           <tt-company-info></tt-company-info>
-
-          <tt-blog></tt-blog>
           <tt-footer></tt-footer>
           <div class="footer" style="padding-top:50px"></div></div
       ></el-col>
@@ -33,7 +31,6 @@ import ttBanner from "../components/tt-banner.vue";
 import ttCulmn from "../components/tt-culmn.vue";
 import ttProductList from "../components/tt-product-list.vue";
 import ttCompanyInfo from "../components/tt-company-info.vue";
-import ttBlog from "../components/tt-blog.vue";
 import ttFooter from "../components/tt-footer.vue";
 @Component({
   components: {
@@ -42,7 +39,6 @@ import ttFooter from "../components/tt-footer.vue";
     ttCulmn,
     ttProductList,
     ttCompanyInfo,
-    ttBlog,
     ttFooter
   }
 })
@@ -54,7 +50,7 @@ export default class Index extends Vue {
 
 <style lang="scss" scoped>
 .container {
-  cursor: default;
+  cursor: pointer;
   .top .bg-purple-dark {
     display: flex;
     height: 30px;

@@ -101,7 +101,7 @@ export default class ProductList extends Vue {
     .product {
       height: 500px;
       .pic {
-        height: 300px;
+        height: 350px;
       }
     }
   }

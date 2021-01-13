@@ -52,12 +52,11 @@ export default class xxx extends Vue {}
     display: flex;
     line-height: 30px;
     font-weight: 700;
+    justify-content: flex-end;
   }
   .instruction {
-    margin: 40px;
+    margin: 20px;
     display: flex;
-    font-size: 14px;
-    color: #555;
     justify-content: center;
   }
 }

@@ -17,8 +17,7 @@
           <tt-product-list style="padding-top:20px"></tt-product-list>
           <tt-culmn :title="CompanyInfo"></tt-culmn>
           <tt-company-info></tt-company-info>
-
-          <tt-blog></tt-blog>
+          <tt-culmn :title="CompanyInfo"></tt-culmn>
           <tt-footer></tt-footer>
           <div class="footer" style="padding-top:50px"></div></div
       ></el-col>

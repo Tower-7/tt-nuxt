@@ -14,7 +14,7 @@
         <div class="pic-wrap">
           <el-image
             class="pic"
-            style="width: 100%; "
+            style="width: 100%; height: 260px"
             :fit="fits[2]"
             :src="item.image_uri"
           ></el-image>
@@ -99,32 +99,23 @@ export default class ProductList extends Vue {
 
   @media (max-width: 1920px) {
     .product {
-      height: 500px;
-      .pic {
-        height: 300px;
-      }
-    }
-  }
-
-  @media (max-width: 1600px) {
-    .product {
       height: 450px;
       .pic {
-        height: 250px;
+        height: 350px;
       }
     }
   }
   @media (max-width: 1200px) {
     .product {
-      height: 450px;
+      height: 400px;
       .pic {
-        height: 250px;
+        height: 300px;
       }
     }
   }
   @media (max-width: 768px) {
     .product {
-      height: 600px;
+      height: 550px;
       .pic {
         height: 450px;
       }

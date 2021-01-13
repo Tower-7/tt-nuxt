@@ -101,32 +101,12 @@ export default class TtBlog extends Vue {
     }
   }
 }
-.btn2 {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 5px 20px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #000;
-  cursor: pointer;
-}
-.title {
-  margin-top: 5px;
-  font-size: 16px;
-}
-.intro {
-  margin-top: 5px;
-  font-size: 14px;
-}
-.btn2:hover {
-  background-color: #555;
-}
 .pic-wrap:hover .button span {
   padding: 0 20px;
 }
 @media (max-width: 1920px) {
   .blog {
-    height: 510px;
+    height: 450px;
     .pic {
       height: 350px;
     }
@@ -134,7 +114,7 @@ export default class TtBlog extends Vue {
 }
 @media (max-width: 1200px) {
   .blog {
-    height: 460px;
+    height: 400px;
     .pic {
       height: 300px;
     }
@@ -142,7 +122,7 @@ export default class TtBlog extends Vue {
 }
 @media (max-width: 992px) {
   .blog {
-    height: 610px;
+    height: 550px;
     .pic {
       height: 450px;
     }

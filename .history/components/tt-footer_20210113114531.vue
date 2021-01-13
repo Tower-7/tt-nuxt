@@ -54,10 +54,9 @@ export default class xxx extends Vue {}
     font-weight: 700;
   }
   .instruction {
-    margin: 40px;
+    margin: 20px;
     display: flex;
     font-size: 14px;
-    color: #555;
     justify-content: center;
   }
 }

@@ -4,7 +4,7 @@ import request from "./request";
  */
 function fetchList() {
   return request({
-    url: "product/list",
+    url: "case/list",
     method: "get"
   });
 }

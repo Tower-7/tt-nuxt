@@ -49,6 +49,7 @@ import ttFooter from "../components/tt-footer.vue";
 export default class Index extends Vue {
   private Product = "PRODUCT";
   private CompanyInfo = "COMPANY INFO";
+  private Blog = "BLOG";
 }
 </script>
 

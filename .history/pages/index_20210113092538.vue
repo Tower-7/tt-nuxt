@@ -17,7 +17,7 @@
           <tt-product-list style="padding-top:20px"></tt-product-list>
           <tt-culmn :title="CompanyInfo"></tt-culmn>
           <tt-company-info></tt-company-info>
-
+          <tt-culmn :title="Blog"></tt-culmn>
           <tt-blog></tt-blog>
           <tt-footer></tt-footer>
           <div class="footer" style="padding-top:50px"></div></div
@@ -49,6 +49,7 @@ import ttFooter from "../components/tt-footer.vue";
 export default class Index extends Vue {
   private Product = "PRODUCT";
   private CompanyInfo = "COMPANY INFO";
+  private Blog = "BLOG";
 }
 </script>
 

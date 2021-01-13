@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="culmn">
-      <div>\\\{{ title }}</div>
+      <div>\\\PRODUCT</div>
       <div>MORE</div>
     </div>
   </div>

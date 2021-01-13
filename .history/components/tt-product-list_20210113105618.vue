@@ -101,16 +101,7 @@ export default class ProductList extends Vue {
     .product {
       height: 500px;
       .pic {
-        height: 300px;
-      }
-    }
-  }
-
-  @media (max-width: 1600px) {
-    .product {
-      height: 450px;
-      .pic {
-        height: 250px;
+        height: 350px;
       }
     }
   }
@@ -118,7 +109,7 @@ export default class ProductList extends Vue {
     .product {
       height: 450px;
       .pic {
-        height: 250px;
+        height: 300px;
       }
     }
   }

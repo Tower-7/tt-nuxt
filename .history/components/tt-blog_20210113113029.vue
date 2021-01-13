@@ -25,7 +25,6 @@
                 <span>DETAIL</span> <i class="el-icon-arrow-right"></i>
               </div>
             </div>
-            <div class="title">{{ item.title }}</div>
             <div class="intro">{{ item.intro }}</div>
             <div class="btn2">E-MAIL</div>
           </el-col>
@@ -110,10 +109,6 @@ export default class TtBlog extends Vue {
   background-color: #000;
   cursor: pointer;
 }
-.title {
-  margin-top: 5px;
-  font-size: 16px;
-}
 .intro {
   margin-top: 5px;
   font-size: 14px;
@@ -126,7 +121,7 @@ export default class TtBlog extends Vue {
 }
 @media (max-width: 1920px) {
   .blog {
-    height: 510px;
+    height: 480px;
     .pic {
       height: 350px;
     }
@@ -134,7 +129,7 @@ export default class TtBlog extends Vue {
 }
 @media (max-width: 1200px) {
   .blog {
-    height: 460px;
+    height: 430px;
     .pic {
       height: 300px;
     }
@@ -142,7 +137,7 @@ export default class TtBlog extends Vue {
 }
 @media (max-width: 992px) {
   .blog {
-    height: 610px;
+    height: 580px;
     .pic {
       height: 450px;
     }

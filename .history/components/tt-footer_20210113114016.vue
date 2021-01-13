@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="line1"></div>
+    <div class="line"></div>
     <div>
       <el-row class="web-site">
         <el-col>
@@ -17,11 +17,7 @@
         </el-col>
       </el-row>
     </div>
-    <div class="line2"></div>
-    <div class="instruction">
-      Photo copyright retained by photo owners, everything else © 2021 Design
-      Milk®.
-    </div>
+    <div class="line"></div>
   </div>
 </template>
 
@@ -34,31 +30,15 @@ export default class xxx extends Vue {}
 <style lang="scss" scoped>
 .container {
   margin-top: 40px;
-  .line1 {
+  .line {
     width: 100%;
-    height: 10px;
-    margin-bottom: 20px;
+    height: 5px;
     border-top: 4px solid #000;
     border-bottom: 1px solid #000;
   }
-  .line2 {
-    width: 100%;
-    height: 10px;
-    margin-top: 20px;
-    border-top: 1px solid #000;
-    border-bottom: 4px solid #000;
-  }
   .web-site {
     display: flex;
-    line-height: 30px;
-    font-weight: 700;
-  }
-  .instruction {
-    margin: 40px;
-    display: flex;
-    font-size: 14px;
-    color: #555;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 </style>
