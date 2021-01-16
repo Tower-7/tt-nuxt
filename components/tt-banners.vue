@@ -1,24 +1,45 @@
 <template>
   <div class="container">
     <el-row :gutter="30">
-      <el-col :span="24">
-        <el-carousel
-          trigger="click"
-          height="50vh"
-          @change="
-            pre => {
-              change(pre);
-            }
-          "
-        >
-          <el-carousel-item v-for="(item, index) in list" :key="index">
-            <!-- <img :src="item.image_uri" alt="" /> -->
-            <el-image
-              style="width: 100%; height: 100%"
-              :src="item.image_uri"
-            ></el-image>
-          </el-carousel-item>
-        </el-carousel>
+      <el-col :xs="24" :sm="24" :md="18" :lg="18" :xl="18">
+        <el-row :gutter="20" class="banner-wrap">
+          <el-col :xs="24" :sm="24" :md="24" :lg="16" :xl="16">
+            <el-carousel
+              trigger="click"
+              height="50vh"
+              @change="
+                pre => {
+                  change(pre);
+                }
+              "
+            >
+              <el-carousel-item v-for="(item, index) in list" :key="index">
+                <img :src="item.image_uri" alt="" />
+              </el-carousel-item>
+            </el-carousel>
+          </el-col>
+          <el-col :xs="24" :sm="24" :md="24" :lg="8" :xl="8">
+            <div class="content">
+              <h2 class="title">{{ title }}</h2>
+              <p class="intro">
+                {{ intro }}
+              </p>
+            </div>
+          </el-col>
+        </el-row>
+      </el-col>
+      <el-col :xs="24" :sm="24" :md="6" :lg="6" :xl="6">
+        <div class="right-tool">
+          <div class="space"></div>
+          <div class="content">
+            <div>ARIUMA Releases Pantone</div>
+            <p>
+              Explore our newest collection of modern lighting looks to refresh
+              your home. Free Shipping on orders over $50!
+            </p>
+            <div class="button">SUB SCRIBE</div>
+          </div>
+        </div>
       </el-col>
     </el-row>
   </div>
@@ -30,7 +51,6 @@ import { fetchList } from "../api/banner";
 @Component({})
 export default class TtBanner extends Vue {
   private list: any = [];
-  private fits: any = ["fill", "contain", "cover", "none", "scale-down"];
   private title = "";
   private intro = "";
   private created() {
