@@ -36,10 +36,6 @@ export default {
   build: {
     transpile: [/^element-ui/],
     postcss: [
-      require("postcss-pxtorem")({
-        rootValue: 12, // vant-UI的官方根字体大小是37.5
-        propList: ["*"]
-      }),
       require("autoprefixer")({
         browsers: ["last 2 versions", "> 5%"]
       })
