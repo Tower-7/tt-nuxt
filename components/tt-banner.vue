@@ -4,7 +4,7 @@
       <el-col :span="24">
         <el-carousel
           trigger="click"
-          height="50vh"
+          class="banner"
           @change="
             pre => {
               change(pre);
@@ -47,13 +47,45 @@ export default class TtBanner extends Vue {
 }
 </script>
 <style lang="scss" scoped>
+@media only screen and (min-width: 1700px) {
+  .banner {
+    height: 550px;
+    ::v-deep .el-carousel__container {
+      height: 550px;
+    }
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1700px) {
+  .banner {
+    height: 500px;
+    ::v-deep .el-carousel__container {
+      height: 500px;
+    }
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 1200px) {
+  .banner {
+    height: 450px;
+    ::v-deep .el-carousel__container {
+      height: 450px;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .banner {
+    height: 200px;
+    ::v-deep .el-carousel__container {
+      height: 200px;
+    }
+  }
+}
 .container {
   cursor: default;
 }
+
 .banner-wrap {
   background-color: #e6e6e6;
   .content {
-    height: 45vh;
     margin-top: 20px;
     padding: 40px;
     background-color: #fff;

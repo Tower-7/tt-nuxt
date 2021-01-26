@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const service = axios.create({
-  baseURL: "http://8.210.11.11:8000/",
+  baseURL: "https://bacicabinets.com/api/",
+  baseURL: "http://localhost:8000",
   withCredentials: true, // send cookies when cross-domain requests
   timeout: 5000
 });

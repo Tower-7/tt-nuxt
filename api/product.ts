@@ -8,4 +8,14 @@ function fetchList() {
     method: "get"
   });
 }
-export { fetchList };
+/**
+ * 获取商品列表
+ */
+function fetchDetail(id: any) {
+  return request({
+    url: "product/detail",
+    method: "get",
+    params: { id }
+  });
+}
+export { fetchList, fetchDetail };
