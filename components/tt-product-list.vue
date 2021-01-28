@@ -19,7 +19,7 @@
             :src="item.image_uri"
           ></el-image>
           <div class="button">
-            <NuxtLink class="link" :to="`product_detail?id=${item._id}`"
+            <NuxtLink class="link" :to="`detail?id=${item._id}`"
               ><span>SHOP</span> <i class="el-icon-arrow-right"></i
             ></NuxtLink>
           </div>

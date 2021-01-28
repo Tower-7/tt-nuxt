@@ -11,7 +11,7 @@
               {{ item.intro }}
             </div>
             <div class="button">
-              <NuxtLink class="link" :to="`product_detail?id=${item._id}`"
+              <NuxtLink class="link" :to="`detail?id=${item._id}`"
                 >READ MORE</NuxtLink
               >
             </div>
@@ -29,7 +29,7 @@
               {{ item.intro }}
             </div>
             <div class="button">
-              <NuxtLink class="link" :to="`product_detail?id=${item._id}`"
+              <NuxtLink class="link" :to="`detail?id=${item._id}`"
                 >READ MORE</NuxtLink
               >
             </div>
@@ -49,7 +49,7 @@
               {{ item.intro }}
             </div>
             <div class="button">
-              <NuxtLink class="link" :to="`product_detail?id=${item._id}`"
+              <NuxtLink class="link" :to="`detail?id=${item._id}`"
                 >READ MORE</NuxtLink
               >
             </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="container" v-if="show">
-    <el-row :gutter="60" class="wrap">
+    <el-row class="wrap">
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <div class="content">
           <div class="title">
@@ -10,15 +10,42 @@
             Zuzunaga's Pixel Collection stands out for its timeless, non-gender
             specific, sustainable home and fashion in great color combos!
           </div>
-          <div class="button">READ MORE</div>
         </div>
       </el-col>
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <el-image :src="data.image_uri" :fit="fits[2]"></el-image>
       </el-col>
     </el-row>
-    <div class="sub-title">The Pixel Collection</div>
-    <tt-product-list></tt-product-list>
+    <el-row class="wrap">
+      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+        <GmapMap
+          :center="{ lat: 10, lng: 10 }"
+          :zoom="7"
+          map-type-id="terrain"
+          style="width: 100%; height: 300px"
+        >
+          <!-- <GmapMarker
+            :key="index"
+            v-for="(m, index) in markers"
+            :position="m.position"
+            :clickable="true"
+            :draggable="true"
+            @click="center = m.position"
+          /> -->
+        </GmapMap>
+      </el-col>
+      <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
+        <div class="content">
+          <div class="title">
+            Zuzunaga’s Pixel Collection Is Far From Square
+          </div>
+          <div class="intro">
+            Zuzunaga's Pixel Collection stands out for its timeless, non-gender
+            specific, sustainable home and fashion in great color combos!
+          </div>
+        </div>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -26,9 +53,14 @@
 import { Component, Prop, Vue } from "vue-property-decorator";
 import { fetchData } from "../api/companyInfo";
 import ttProductList from "./tt-product-list.vue";
+import { gmapApi } from "vue2-google-maps";
+console.log(gmapApi);
 @Component({
   components: {
     ttProductList
+  },
+  computed: {
+    google: gmapApi
   }
 })
 export default class CompanyInfo extends Vue {
@@ -42,6 +74,7 @@ export default class CompanyInfo extends Vue {
       console.log(res);
     });
   }
+  private mounted() {}
 }
 </script>
 
@@ -52,8 +85,8 @@ export default class CompanyInfo extends Vue {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 40px;
     .content {
+      margin-left: 50px;
       .title {
         font-size: 35px;
       }

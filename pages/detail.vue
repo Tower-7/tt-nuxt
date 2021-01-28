@@ -46,7 +46,8 @@
 import { Component, Prop, Vue, Emit } from "vue-property-decorator";
 import ttNav from "../components/tt-nav.vue";
 import ttCulmn from "../components/tt-culmn.vue";
-import { fetchDetail } from "../api/product";
+import { fetchDetail as fetchProductDetail } from "../api/product";
+import { fetchDetail as fetchBlogDetail } from "../api/blog";
 @Component({
   components: {
     ttNav
@@ -55,17 +56,34 @@ import { fetchDetail } from "../api/product";
 export default class ProductDetail extends Vue {
   private title: any = "";
   private intro: any = "";
+  private infoType: any = "";
   private content: any = "";
   private coverPic: any = "";
   private fiexdContactBox: any = "";
 
   private mounted() {
-    fetchDetail(this.$route.query.id).then((res: any) => {
-      this.title = res.title;
-      this.intro = res.intro;
-      this.coverPic = res.image_uri;
-      this.content = res.content;
-    });
+    this.infoType = this.$route.query.infoType;
+    switch (this.infoType) {
+      case "1":
+        fetchProductDetail(this.$route.query.id).then((res: any) => {
+          this.title = res.title;
+          this.intro = res.intro;
+          this.coverPic = res.image_uri;
+          this.content = res.content;
+        });
+        break;
+      case "2":
+        fetchBlogDetail(this.$route.query.id).then((res: any) => {
+          this.title = res.title;
+          this.intro = res.intro;
+          this.coverPic = res.image_uri;
+          this.content = res.content;
+        });
+        break;
+      default:
+        break;
+    }
+
     (window as any).addEventListener("scroll", this.handleScroll);
   }
   private handleScroll() {
@@ -84,6 +102,7 @@ export default class ProductDetail extends Vue {
 
 <style lang="scss" scoped>
 .container {
+  overflow: hidden;
   cursor: default;
   .contact-box-fiexd {
     position: fixed;
