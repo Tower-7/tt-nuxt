@@ -26,26 +26,8 @@ import ttBlog from "../components/tt-blog.vue";
 import ttFooter from "../components/tt-footer.vue";
 import { fetchSeo } from "../api/seo";
 @Component({
-  name: "BACI CABINETS",
-  head: {
-    titleTemplate: "BACI CABINETS",
-    meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        hid: "description",
-        name: "description",
-        content: "product============="
-      }
-    ]
-  },
-  // asyncData({ params }) {
-  //   return fetchSeo(0).then((res: any) => {
-  //     return {
-  //       title: "res.title"
-  //     };
-  //   });
-  // },
+  name: "baciCabinetsIndex",
+
   components: {
     ttNav,
     ttBanner,
@@ -55,6 +37,27 @@ import { fetchSeo } from "../api/seo";
     ttInfoColumn,
     ttBlog,
     ttFooter
+  },
+  async asyncData() {
+    let detail = await fetchSeo(0);
+    return { detail: detail };
+  },
+  head() {
+    return {
+      title: (this as any).detail.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: (this as any).detail.description
+        },
+        {
+          hid: "keywords",
+          name: "keywords",
+          content: (this as any).detail.title
+        }
+      ]
+    };
   }
 })
 export default class Index extends Vue {

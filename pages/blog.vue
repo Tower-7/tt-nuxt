@@ -13,15 +13,38 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue, Emit } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 import ttNav from "../components/tt-nav.vue";
 import ttCulmn from "../components/tt-culmn.vue";
 import ttInfoColumn from "../components/tt-info-column.vue";
+import { fetchSeo } from "../api/seo";
 @Component({
+  name: "blog",
   components: {
     ttNav,
     ttCulmn,
     ttInfoColumn
+  },
+  async asyncData() {
+    let detail = await fetchSeo(2);
+    return { detail: detail };
+  },
+  head() {
+    return {
+      title: (this as any).detail.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: (this as any).detail.description
+        },
+        {
+          hid: "keywords",
+          name: "keywords",
+          content: (this as any).detail.title
+        }
+      ]
+    };
   }
 })
 export default class Blog extends Vue {

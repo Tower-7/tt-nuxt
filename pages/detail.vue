@@ -51,6 +51,41 @@ import { fetchDetail as fetchBlogDetail } from "../api/blog";
 @Component({
   components: {
     ttNav
+  },
+  // async asyncData({ app, query }) {
+  //   await fetchProductDetail(query.id).then((res: any) => {
+  //     (app as any).head.title = res?.title || "BACI CABINETS";
+  //     (app as any).head.meta = [
+  //       { hid: "description", name: "description", content: res?.intro },
+  //       { hid: "keywords", name: "keywords", content: res?.title }
+  //     ];
+  //   });
+  // }
+  async asyncData({ query }) {
+    let detail;
+    if (+query.infoType === 1) {
+      detail = await fetchProductDetail(query.id);
+    } else {
+      detail = await fetchBlogDetail(query.id);
+    }
+    return { detail: detail };
+  },
+  head() {
+    return {
+      title: (this as any).detail?.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: (this as any).detail?.description
+        },
+        {
+          hid: "keywords",
+          name: "keywords",
+          content: (this as any).detail?.title
+        }
+      ]
+    };
   }
 })
 export default class ProductDetail extends Vue {

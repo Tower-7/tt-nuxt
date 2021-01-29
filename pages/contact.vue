@@ -26,11 +26,33 @@
 import { Component, Prop, Vue, Emit } from "vue-property-decorator";
 import ttNav from "../components/tt-nav.vue";
 import { fetchData } from "../api/companyInfo";
+import { fetchSeo } from "../api/seo";
 import ttCompanyInfo from "../components/tt-company-info.vue";
 @Component({
   components: {
     ttNav,
     ttCompanyInfo
+  },
+  async asyncData() {
+    let detail = await fetchSeo(3);
+    return { detail: detail };
+  },
+  head() {
+    return {
+      title: (this as any).detail.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: (this as any).detail.description
+        },
+        {
+          hid: "keywords",
+          name: "keywords",
+          content: (this as any).detail.title
+        }
+      ]
+    };
   }
 })
 export default class Blog extends Vue {

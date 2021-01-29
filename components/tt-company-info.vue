@@ -37,11 +37,21 @@
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <div class="content">
           <div class="title">
-            Zuzunaga’s Pixel Collection Is Far From Square
+            Contact Us
           </div>
           <div class="intro">
-            Zuzunaga's Pixel Collection stands out for its timeless, non-gender
-            specific, sustainable home and fashion in great color combos!
+            <div class="list">
+              <div>adress:</div>
+              <div>China</div>
+            </div>
+            <div class="list">
+              <div>adress:</div>
+              <div>China</div>
+            </div>
+            <div class="list">
+              <div>adress:</div>
+              <div>China</div>
+            </div>
           </div>
         </div>
       </el-col>
@@ -92,6 +102,9 @@ export default class CompanyInfo extends Vue {
       }
       .intro {
         font-size: 16px;
+        .list {
+          display: flex;
+        }
       }
       .button {
         display: inline-block;
