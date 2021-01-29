@@ -4,11 +4,10 @@
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <div class="content">
           <div class="title">
-            Zuzunaga’s Pixel Collection Is Far From Square
+            {{ data.subtitle }}
           </div>
           <div class="intro">
-            Zuzunaga's Pixel Collection stands out for its timeless, non-gender
-            specific, sustainable home and fashion in great color combos!
+            {{ data.intro }}
           </div>
         </div>
       </el-col>
@@ -18,21 +17,22 @@
     </el-row>
     <el-row class="wrap">
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
-        <GmapMap
+        <el-image :src="data.map_image_uri" :fit="fits[2]"></el-image>
+        <!-- <GmapMap
           :center="{ lat: 10, lng: 10 }"
           :zoom="7"
           map-type-id="terrain"
           style="width: 100%; height: 300px"
         >
-          <!-- <GmapMarker
+          <GmapMarker
             :key="index"
             v-for="(m, index) in markers"
             :position="m.position"
             :clickable="true"
             :draggable="true"
             @click="center = m.position"
-          /> -->
-        </GmapMap>
+          />
+        </GmapMap> -->
       </el-col>
       <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
         <div class="content">
@@ -41,16 +41,16 @@
           </div>
           <div class="intro">
             <div class="list">
-              <div>adress:</div>
-              <div>China</div>
+              <div>ADRESS:</div>
+              <div>{{ data.adress }}</div>
             </div>
             <div class="list">
-              <div>adress:</div>
-              <div>China</div>
+              <div>E-MAIL:</div>
+              <div>{{ data.email }}</div>
             </div>
             <div class="list">
-              <div>adress:</div>
-              <div>China</div>
+              <div>PHONE:</div>
+              <div>data.phone</div>
             </div>
           </div>
         </div>
@@ -104,6 +104,11 @@ export default class CompanyInfo extends Vue {
         font-size: 16px;
         .list {
           display: flex;
+          line-height: 2.5rem;
+          color: #555;
+          div {
+            padding: 0 10px;
+          }
         }
       }
       .button {

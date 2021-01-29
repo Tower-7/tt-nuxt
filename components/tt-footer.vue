@@ -12,8 +12,9 @@
         </el-col>
         <el-col>
           <div>CONTACT</div>
-          <div>phone:+86-18158888</div>
-          <div>e-mail: lahlhgao@gamil.com</div>
+          <div>phone:{{ data.phone }}</div>
+          <div>e-mail: {{ data.email }}</div>
+          <div>adress: {{ data.adress }}</div>
         </el-col>
       </el-row>
     </div>
@@ -26,9 +27,17 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
+import { fetchData } from "../api/companyInfo";
 @Component({})
-export default class xxx extends Vue {}
+export default class Footer extends Vue {
+  private data: any = "";
+  private created() {
+    fetchData().then((res: any) => {
+      this.data = res;
+    });
+  }
+}
 </script>
 
 <style lang="scss" scoped>

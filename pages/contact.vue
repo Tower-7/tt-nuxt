@@ -10,7 +10,7 @@
               :src="CompanyInfo.background_image_uri"
             ></el-image>
             <div class="bg-cover">
-              THAI MEGACAB x GOLDENHOME
+              {{ CompanyInfo.title }}
             </div>
           </div>
 
